@@ -38,4 +38,8 @@ public class MyObject {
 	public void useCar(Car car) {
 		car.drive();
 	}
+	// 3 개의 type 을 메소드의 인자로 전달 받는 메소드
+	public void doSomething(int num, String msg, Car c) {
+		System.out.println("무언가를 작업합니다.");
+	}
 }
