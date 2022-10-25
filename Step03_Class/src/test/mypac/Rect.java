@@ -5,6 +5,8 @@ public class Rect {
 	public int height;
 	
 	public void showArea() {
-		System.out.println(this.width * this.height);
+		//필드에 있는 값을 활용해서 면적을 계산한다.
+		int area = this.width * this.height;
+		System.out.println("면적은:"+area+" 입니다.");
 	}
 }
