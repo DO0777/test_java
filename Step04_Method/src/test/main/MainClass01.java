@@ -13,5 +13,8 @@ public class MainClass01 {
 		obj1.walk();
 		int num = obj1.getNumber();
 		String greet = obj1.getGreeting();
+		Car car = obj1.getCar();
+		// setNum(), setName(), useCar()
+		
 	}
 }
