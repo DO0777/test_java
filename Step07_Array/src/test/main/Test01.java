@@ -21,4 +21,6 @@ public class Test01 {
 			System.out.println("당첨됐습니다.");
 		}else {System.out.println("꽝입니다.");}
 	}
+	
+	
 }
