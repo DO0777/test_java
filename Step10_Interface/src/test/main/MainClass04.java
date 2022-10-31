@@ -10,7 +10,7 @@ public class MainClass04 {
 				System.out.println("바닥에 구멍을 뚤어요");
 			}
 		});
-		
+		//메소드가 오직 하나인 경우에만 쓸수 있다.
 		useDrill(()->{
 			System.out.println("천장에 구멍을 뚤어요");
 		});
