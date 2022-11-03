@@ -85,7 +85,6 @@ public class MyFrame3 extends JFrame implements ActionListener {
 		try {
 	         Thread.sleep(10000);
 	      } catch (InterruptedException e1) {
-	         // TODO Auto-generated catch block
 	         e1.printStackTrace();
 	      }
 	      
