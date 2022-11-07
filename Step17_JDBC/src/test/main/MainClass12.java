@@ -44,7 +44,7 @@ public class MainClass12 {
         	MemberDto dto = new MemberDto();
         	dto.setNum(rs.getInt("num"));
         	dto.setName(rs.getString("name"));
-        	dto.setAddr(rs.getString("sddr"));
+        	dto.setAddr(rs.getString("addr"));
         	//회원 한명의 정보가 담기 MemberDto 객체의 참조값을 ArrayList 객체에 누적시키기
         	list.add(dto);
          }

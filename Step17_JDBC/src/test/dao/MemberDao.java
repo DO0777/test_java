@@ -27,7 +27,7 @@ public class MemberDao {
 			conn=new DBConnect().getConn();
 			//실행할 미완성의 sql 문
 			String sql="INSERT INTO member"
-					+" (num, name, addr"
+					+" (num, name, addr)"
 					+" VALUES(member_seq.NEXTVAL, ?, ?)";
 			//PreparedStatement 객체의 참조값 얻어오기
 			pstmt=conn.prepareStatement(sql);
