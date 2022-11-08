@@ -36,6 +36,7 @@ public class MemberDao {
 	        pstmt.setString(2, dto.getAddr());
 	        //sql 문 실행하고 변화된(추가, 수정, 삭제) row 의 갯수를 리턴받기
 	        rowCount =pstmt.executeUpdate();
+	        
 		}catch(Exception e) {
 			e.printStackTrace();
 		}finally {
@@ -88,7 +89,7 @@ public class MemberDao {
         }
 	}
 	//회원 한명의 정보를 삭제하고 작업의 성공 여부를 리턴해주는 메소드
-	public boolean delete(MemberDto dto) {
+	public boolean delete(int num) {
 		 Connection conn=null;
 	     PreparedStatement pstmt=null;
 	     //수정된 row 의 갯수를 담을 지역변수를 미리 만들고 초기값 0 대입하기
@@ -102,7 +103,7 @@ public class MemberDao {
 	          //PreparedStatement 객체의 참조값 얻어오기
 	          pstmt=conn.prepareStatement(sql);
 	          // ? 에 값 바인딩
-	          pstmt.setInt(1, dto.getNum());    
+	          pstmt.setInt(1, num);    
 	          //sql 문 실행하고 변화된(추가,수정,삭제) row 의 갯수를 리턴받기
 	          rowCount = pstmt.executeUpdate();
 	      }catch (Exception e) {
@@ -141,7 +142,7 @@ public class MemberDao {
 	        	MemberDto dto = new MemberDto();
 	        	dto.setNum(rs.getInt("num"));
 	        	dto.setName(rs.getString("name"));
-	        	dto.setAddr(rs.getString("sddr"));
+	        	dto.setAddr(rs.getString("addr"));
 	        	//회원 한명의 정보가 담기 MemberDto 객체의 참조값을 ArrayList 객체에 누적시키기
 	        	list.add(dto);
 	         }
